@@ -1,46 +1,111 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
 
-## Available Scripts
+# TS-01 To-Do App with TypeScript
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Project aims to create a To-Do App with TypeScript.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Problem Statement
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- We are adding a new project to our portfolios. So you and your colleagues have started to work on the project.
 
-### `npm test`
+## Project Skeleton
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+Todoapp with TypeScript+React(CRA)
 
-### `npm run build`
+SOLUTION
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+├── README.md
+├── src
+│   ├── App.tsx
+│   ├── components
+│   │   ├── AddTodoComp.tsx
+│   │   ├── TodoListItem.tsx
+│   │   └── TodoList.tsx
+│   ├── helper
+│   │   └── sweetAlert.ts
+│   ├── index.tsx
+│   ├── pages
+│   │   └── Main.tsx
+│   ├── react-app-env.d.ts
+│   └── types.d.ts
+├── tsconfig.json
+└── yarn.lock
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Expected Outcome
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![todoapp](./todoapp.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Objective
 
-### `npm run eject`
+Build a TodoApp with Typescript using ReactJS.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### At the end of the project, following topics are to be covered;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- HTML
+- CSS
+- JS
+- TS
+- React
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### At the end of the project, students will be able to;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- improve coding skills within HTML & CSS & JS & TS & React.
 
-## Learn More
+- use git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Steps to Solution
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Step 1 : Create project `yarn create react-app todo-ts --template typescript` or `npx create-react-app todo-ts --template typescript`.
+
+- Step 2 : Use mockApi for todos..
+
+- Step 3 : You can use CSS frameworks like Bootstrap, Material UI etc.
+
+- Step 3 : You can use notificitons like `react-toastify`,`sweetalert2` etc.
+
+- Step 4 : Add project gif to your project and README.md file.
+
+## Notes
+
+- You can add additional functionalities to your app.
+
+## Demo
+
+[TodoApp with CRA+Typescript](https://ts-todo-xi.vercel.app/)
+
+## MockApi
+
+<a href="https://mockapi.io/" target="_blank">MockApi</a>
+
+## How do we create mockApi? Watch the video!
+
+<a href="https://www.youtube.com/watch?v=i_Gvlp83GMk" target="_blank">
+ Watch the video
+</a><br>
+<br>
+
+Or you can find **MockApi quick start guide** <a href="https://github.com/mockapi-io/docs/wiki/Quick-start-guide" target="_blank">here</a>
+
+**<p align="center">&#9786; Happy Coding &#9997;</p>**
+
+
+## Start Project CRA
+
+```
+npx create-react-app todo-ts --template typescript
+
+#or
+
+yarn create react-app todo-ts --template typescript
+
+```
+
+![CRA ile Proje Oluşturma](./ts-cra.gif)
