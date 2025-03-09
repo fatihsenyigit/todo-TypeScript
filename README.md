@@ -1,5 +1,5 @@
 
-  src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
+
 
 # TS-01 To-Do App with TypeScript
 
@@ -94,7 +94,7 @@ Build a TodoApp with Typescript using ReactJS.
 
 Or you can find **MockApi quick start guide** <a href="https://github.com/mockapi-io/docs/wiki/Quick-start-guide" target="_blank">here</a>
 
-**<p align="center">&#9786; Happy Coding &#9997;</p>**
+
 
 
 ## Start Project CRA
