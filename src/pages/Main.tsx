@@ -5,12 +5,12 @@ import axios from "axios";
 import AddTodo from "../components/AddTodo";
 import TodoList from "../components/TodoList";
 
-interface ITodoType {
+/* interface ITodoType {
   task: string;
   isDone: boolean;
   id: string | number;
   todo?: string;
-}
+} */
 
 const url = "https://67cd5c91dd7651e464ee2794.mockapi.io/todos";
 
@@ -63,7 +63,7 @@ const Main = () => {
     <Container>
       <Header></Header>
       <AddTodo addTodo={addTodo}></AddTodo>
-      <TodoList></TodoList>
+      <TodoList todos={todos}></TodoList>
     </Container>
   );
 };
