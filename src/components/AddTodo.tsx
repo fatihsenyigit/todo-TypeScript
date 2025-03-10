@@ -3,8 +3,13 @@ import {Box, Button, TextField} from '@mui/material'
 import SaveIcon from '@mui/icons-material/Save'
 import { useState } from 'react'
 
+// props tanimlamasi yapmamiz lazim. birinci yol direk propta tanimlama yapabiliriz. ikinci yol ise ayri bir interface tanimlamasi yaparak const AddTodo = ({addTodo}:{addTodo:(task:string)=>Promise<void>}) => {} biz burada ikinci yolu deneyecegiz. ikinci yolda genelde interface adini component in adina gore verilir, best practice icin
 
-const AddTodo = () => {
+interface IAddTodo {
+    addTodo: AddFunc
+}
+
+const AddTodo = ({addTodo}:IAddTodo) => {
     const [task, setTask] = useState('')    // burada type inference yaptik. cunku her zaman type belirtmemize gerek yok. TypeScript type inference ozelligi sayesinde inital degerine gore otomatik type atamasi yapiyor
     const handleClick = () => {
         console.log(task)
