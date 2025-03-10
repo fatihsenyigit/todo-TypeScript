@@ -2,6 +2,7 @@ import { Container } from "@mui/material";
 import Header from "../components/Header";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import AddTodo from "../components/AddTodo";
 
 interface ITodoType {
   task: string;
@@ -36,6 +37,7 @@ const Main = () => {
   return (
     <Container>
       <Header></Header>
+      <AddTodo></AddTodo>
     </Container>
   );
 };
