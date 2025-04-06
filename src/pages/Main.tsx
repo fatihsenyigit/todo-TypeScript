@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import AddTodo from "../components/AddTodo";
 import TodoList from "../components/TodoList";
+import { notify, SweetIcon } from "../helper/sweetAlert";
 
 /* interface ITodoType {
   task: string;
@@ -47,6 +48,7 @@ const Main = () => {
     const addTodo: AddFunc = async(task) => {
         try {
             await axios.post(url, {task, isDone:false})
+            notify('Todo Created', SweetIcon.SUCCESS)
             getTodos()
         } catch (error) {
             console.log(error)
@@ -66,6 +68,7 @@ const Main = () => {
     const deleteTodo: DeleteFunc = async(id) => {
         try {
             await axios.delete(`${url}/${id}`)
+            notify('It is deleted', SweetIcon.WARNING)
         } catch (error) {
             console.log(error)
         } finally{

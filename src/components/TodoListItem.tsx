@@ -23,7 +23,7 @@ const TodoListItem:React.FC<ITodoListItem> = ({todo, deleteTodo, toggleTodo}) =>
         </IconButton>
       }
     >
-      <ListItemText primary={todo.task} onClick={()=>toggleTodo(todo)} />
+      <ListItemText sx={{wordWrap:'break-word'}} primary={todo.task} onClick={()=>toggleTodo(todo)} />
     </ListItem>
   )
 }
