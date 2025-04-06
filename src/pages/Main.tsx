@@ -52,6 +52,26 @@ const Main = () => {
             console.log(error)
         }
     }
+
+    const toggleTodo: ToggleFunc = async(todo) => {
+        try {
+            await axios.put(`${url}/${todo.id}`, {...todos, isDone: !todo.isDone})
+        } catch (error) {
+            console.log(error)
+        } finally{
+            getTodos()
+        }
+    }
+
+    const deleteTodo: DeleteFunc = async(id) => {
+        try {
+            await axios.delete(`${url}/${id}`)
+        } catch (error) {
+            console.log(error)
+        } finally{
+            getTodos()
+        }
+    }
     
 
   useEffect(() => {
@@ -63,7 +83,7 @@ const Main = () => {
     <Container>
       <Header></Header>
       <AddTodo addTodo={addTodo}></AddTodo>
-      <TodoList todos={todos}></TodoList>
+      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo}></TodoList>
     </Container>
   );
 };

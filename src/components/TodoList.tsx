@@ -1,8 +1,15 @@
 import { Grid, Typography } from "@mui/material";
 import TodoListItem from "./TodoListItem";
 import React from "react";
+import "./style.css"
 
-interface ITodoList {
+/* interface ITodoList {
+  todos: ITodoType[]; 
+  deleteTodo: DeleteFunc;
+  toggleTodo: ToggleFunc    
+} */
+
+interface ITodoList extends ITodoListFunc {
   todos: ITodoType[];
 }
 
@@ -10,7 +17,7 @@ interface ITodoList {
 3. yol  React.FC kullanimi, yani hem componentte bir tanimlama hemde proppa bir tanimlama yapiyoruz
 */
 
-const TodoList: React.FC<ITodoList> = ({ todos }: ITodoList) => {
+const TodoList: React.FC<ITodoList> = ({ todos, deleteTodo, toggleTodo }) => {
   const progressTodos = todos.filter((todo) => !todo.isDone);
   const completedTodos = todos.filter((todo) => todo.isDone);
   return (
@@ -28,38 +35,70 @@ const TodoList: React.FC<ITodoList> = ({ todos }: ITodoList) => {
         item
         xs={12}
         sm={8}
-        md={6}
+        md={5}
+        position={"relative"}
+        className="myscrool scrool-progress"
         sx={{
           minHeight: "350px",
           maxHeight: "350px",
           overflow: "auto",
           border: "2px solid purple",
-          borderRadius: "1rem",
+          borderRadius: ".5rem",
         }}
       >
-        <Typography>InProgress Todos</Typography>
+        <Typography
+          className="title"
+          color="secondary"
+          align="center"
+          variant="h4"
+        >
+          InProgress Todos
+        </Typography>
         {progressTodos.length ? (
-          progressTodos.map((todo) => <TodoListItem></TodoListItem>)
+          progressTodos.map((todo) => (
+            <TodoListItem
+              todo={todo}
+              deleteTodo={deleteTodo}
+              toggleTodo={toggleTodo}
+              key={todo.id}
+            ></TodoListItem>
+          ))
         ) : (
-          <Typography color="error">No Progress todos...</Typography>
+          <Typography color="error" mt={3}>No Progress todos...</Typography>
         )}
       </Grid>
       <Grid
         item
         xs={12}
         sm={8}
-        md={6}
+        md={5}
+        position={"relative"}
+        className="myscrool scrool-completed"
         sx={{
           minHeight: "350px",
           maxHeight: "350px",
           overflow: "auto",
           border: "2px solid green",
-          borderRadius: "1rem",
+          borderRadius: ".5rem",
         }}
       >
-        <Typography>Completed Todos</Typography>
+        <Typography
+          className="title"
+          color="success"
+          align="center"
+          variant="h4"
+        >
+          Completed Todos
+        </Typography>
         {completedTodos.length ? (
-          completedTodos.map((todo) => <TodoListItem></TodoListItem>)
+          completedTodos.map((todo) => (
+            <TodoListItem
+              todo={todo}
+              deleteTodo={deleteTodo}
+              toggleTodo={toggleTodo}
+              key={todo.id}
+            ></TodoListItem>
+          ))
         ) : (
           <Typography color="error">No Completed todos...</Typography>
         )}

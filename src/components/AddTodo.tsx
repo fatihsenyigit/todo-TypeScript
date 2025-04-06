@@ -12,7 +12,8 @@ interface IAddTodo {
 const AddTodo = ({addTodo}:IAddTodo) => {
     const [task, setTask] = useState('')    // burada type inference yaptik. cunku her zaman type belirtmemize gerek yok. TypeScript type inference ozelligi sayesinde inital degerine gore otomatik type atamasi yapiyor
     const handleClick = () => {
-        console.log(task)
+        
+        addTodo(task)
         setTask('')
     }
   return (

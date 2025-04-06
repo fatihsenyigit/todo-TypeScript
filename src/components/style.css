@@ -1,0 +1,30 @@
+
+.myscrool::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrool-progress::-webkit-scrollbar-thumb {
+    background-color: purple;
+    border-radius: 6px;
+}
+
+.scrool-completed::-webkit-scrollbar-thumb {
+    background-color: green;
+    border-radius: 6px;
+}
+
+.myscrool::-webkit-scrollbar-thum:hover {
+    background-color: gray;
+}
+
+.myscrool::-webkit-scroolbar-track {
+    background-color: #f1f1f1;
+}
+
+.title {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    padding-top: .5rem;
+}
